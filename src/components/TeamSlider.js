@@ -45,7 +45,7 @@ export default function TeamSlider() {
   };
 
   return (
-    <div className='relative w-full max-w-6xl mx-auto'>
+    <div className='relative w-full max-w-6xl mx-auto overflow-hidden'>
       <h2 className='text-center text-2xl font-semibold mb-6 text-black'>
         Meet Our Team
       </h2>
@@ -53,18 +53,13 @@ export default function TeamSlider() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className={`relative flex-shrink-0 rounded-xl shadow-lg text-center  items-center 
-              ${index === activeIndex ? 'h-[550px]' : 'h-[480px]'} 
-              sm:${index === activeIndex ? 'h-[420px]' : 'h-[320px]'}  
-              md:${index === activeIndex ? 'h-[430px]' : 'h-[330px]'}  
-              lg:${index === activeIndex ? 'h-[450px]' : 'h-[350px]'}  
-              xl:${index === activeIndex ? 'h-[470px]' : 'h-[360px]'}  
-              
-              w-[90%]  
-              sm:w-[290px]  
-              md:w-[310px]  
-              lg:w-[330px]  
-              xl:w-[350px]  
+            className={`relative flex-shrink-0 rounded-xl shadow-lg text-center mx-auto  
+              ${index === activeIndex ? 'h-[500px]' : 'h-[450px]'} 
+              sm:${index === activeIndex ? 'h-[380px]' : 'h-[330px]'}  
+              md:${index === activeIndex ? 'h-[400px]' : 'h-[350px]'}  
+              lg:${index === activeIndex ? 'h-[420px]' : 'h-[370px]'}  
+              xl:${index === activeIndex ? 'h-[450px]' : 'h-[400px]'}  
+              w-[85%] sm:w-[260px] md:w-[280px] lg:w-[300px] xl:w-[320px]
             `}
           >
             <div className='w-full h-full relative'>
@@ -88,13 +83,8 @@ export default function TeamSlider() {
         ))}
       </Slider>
 
-      <div
-        className={`flex gap-4 ${
-          isMobile
-            ? 'justify-center mt-6'
-            : 'absolute lg:bottom-[-10px] right-4 sm:bottom-[-30px]'
-        }`}
-      >
+      {/* Navigation Buttons */}
+      <div className='flex gap-4 justify-center mt-6'>
         <button
           onClick={() => sliderRef.current.slickPrev()}
           className='cursor-pointer'
