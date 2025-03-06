@@ -13,7 +13,7 @@ export default function Footer() {
           development, we bring expertise, precision, and passion to every
           project.
         </p>
-        <button className='mt-5 bg-[#02937A] text-white px-6 py-2 rounded-md font-semibold hover:bg-green-600 transition'>
+        <button className='mt-5 bg-[#02937A] text-white px-6 py-2 rounded-md font-semibold hover:bg-green-600 transition cursor-pointer'>
           Contact Us Today
         </button>
       </div>
