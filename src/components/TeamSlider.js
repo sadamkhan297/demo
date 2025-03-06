@@ -84,7 +84,13 @@ export default function TeamSlider() {
       </Slider>
 
       {/* Navigation Buttons */}
-      <div className='flex gap-4 justify-center mt-6'>
+      <div
+        className={`flex gap-4 ${
+          isMobile
+            ? 'justify-center mt-6'
+            : 'absolute lg:bottom-[-10px] right-4 sm:bottom-[-30px] pb-1'
+        }`}
+      >
         <button
           onClick={() => sliderRef.current.slickPrev()}
           className='cursor-pointer'

@@ -9,7 +9,7 @@ export default function WhyBuildWithUs() {
       {/* Main Grid Layout */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {/* Left Large Image with Text */}
-        <div className='relative md:col-span-2'>
+        <div className='relative md:col-span-2 sm:text-center'>
           <img
             src='/w1.png'
             alt='Strong Foundations'
@@ -17,7 +17,7 @@ export default function WhyBuildWithUs() {
           />
           <div className='absolute bottom-4 left-4 text-white p-4 md:p-6 rounded-lg w-full md:w-1/2'>
             <h3 className='text-lg md:text-xl font-bold'>Strong Foundations</h3>
-            <p className='mt-2 text-xs md:text-sm'>
+            <p className='mt-2 text-xs md:text-sm pr-3'>
               We construct buildings that are durable, safe, and built to last.
             </p>
             <button className='mt-4 bg-[#02937A] text-white px-4 py-2 rounded'>
